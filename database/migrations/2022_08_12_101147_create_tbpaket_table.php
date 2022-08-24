@@ -18,7 +18,7 @@ class CreateTbpaketTable extends Migration
             $table->unsignedBigInteger('id_outlet');
             $table->enum('jenis',['kiloan','selimut','bed_cover','kaos','lain']);
             $table->string('nama_paket',100);
-            $table->unsignedBigInteger('harga');
+            $table->integer('harga');
             
             $table->foreign('id_outlet')->references('id')->on('tboutlet');
 
